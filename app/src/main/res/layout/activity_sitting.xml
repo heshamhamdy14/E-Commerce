@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Buyer.SittingActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/profile_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/close_sitting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="close"
+                    android:textColor="#fff"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/update_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="update"
+                    android:textColor="#fff"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"/>
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/sitting_profile_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/profile_appbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/profile"/>
+
+    <TextView
+        android:id="@+id/change_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sitting_profile_image"
+        android:layout_centerHorizontal="true"
+        android:text="Change photo"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_marginTop="5dp" />
+
+<EditText
+    android:id="@+id/sitting_update_name"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/change_image"
+    android:padding="15dp"
+    android:layout_marginTop="15dp"
+    android:hint="full name"/>
+
+    <EditText
+        android:id="@+id/sitting_update_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sitting_update_name"
+        android:padding="15dp"
+        android:layout_marginTop="5dp"
+        android:hint="phone number"/>
+
+    <EditText
+        android:id="@+id/sitting_update_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sitting_update_phone_number"
+        android:padding="15dp"
+        android:layout_marginTop="5dp"
+        android:hint="address"/>
+
+    <Button
+        android:id="@+id/set_security_question_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sitting_update_address"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/buttons"
+        android:text="Set Security Questions "
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"/>
+</RelativeLayout>
